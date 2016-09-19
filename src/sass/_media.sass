@@ -1,0 +1,610 @@
+@import "bourbon"
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+@media only screen and (max-width : 1366px)
+	.menu
+		width: 600px
+		perspective: 600px
+	section
+		&.nav-is-open
+			transform: translateX(600px)
+	section.main-header 
+		a.menu-open
+			margin-left: 60px
+		.chest
+			width: 450px
+			position: absolute
+			bottom: 0
+			right: -40px
+			button.open
+				top: 130px
+				left: 10px
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	section.what-is 
+		img
+			width: 680px
+			bottom: 30px
+			right: -230px
+
+	section.price
+		.slick-slider-price 
+			.slick-dots
+				left: 150px
+
+	section.packet
+		img
+			width: 400px
+			right: 0px
+			top: 100px
+		ul
+			padding-left: 20px
+			
+
+@media only screen and (max-width : 840px)
+	section.price
+		.slick-slider-price 
+			.slick-dots
+				left: 120px
+
+	section.packet
+		img
+			width: 350px
+			right: -30px
+			top: 130px
+		ul
+			padding-left: 20px
+	
+	section.vip
+		.advantages
+			ul
+				margin: 0 20px 0 0
+			img.vip-img
+				left: -140px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px)
+	section
+		padding: 17px 15px
+		height: auto	
+		margin: 0
+		min-height: auto
+		box-sizing: border-box
+		.wrapper-inner
+			position: relative
+			min-height: auto
+			margin: 0
+		&.nav-is-open
+			transform: translateX(100%)
+	.menu
+		width: 100vw
+		overflow: hidden
+		.menu-inner
+			background-color: #1d1d1d
+			button.close-mob
+				display: block
+				width: 55px
+				height: 55px
+				position: absolute
+				top: 5px
+				left: 5px
+				border: 0
+				&:hover
+					background: none
+					opacity: .6
+				&:before
+					content: ''
+					position: absolute
+					transform: rotate(45deg)
+					top: 26px
+					left: 16px
+					border-bottom: 2px solid #6e6e6e
+					width: 24px
+				&:after
+					content: ''
+					position: absolute
+					transform: rotate(-45deg)
+					top: 26px
+					left: 16px
+					border-bottom: 2px solid #6e6e6e
+					width: 24px
+
+		.menu-inner-center
+			width: 100%
+			padding: 0 15px
+			right: auto
+			left: 0
+			height: 370px
+			margin-top: -185px
+			ul
+				margin: 0
+			button.close
+				display: none
+			a 
+				border-color: #3b3d3e	
+				color: #737373
+				padding-left: 45px
+	.details
+		width: 100%
+		button.close
+			display: block
+			position: absolute
+			top: 15px
+			left: 15px
+			width: 55px
+			height: 55px
+			&:before
+				position: absolute
+		.inner
+			max-width: none
+			padding: 20px
+			position: relative
+			margin: 0
+			top: auto
+			left: auto
+			height: 100%
+			h3
+				display: block
+	section.main-header
+		text-align: center
+		padding-bottom: 40px
+		background-position: 85% 0
+		background-size: auto 112%
+		h1
+			font-size: 37px
+			line-height: 47px
+			margin: 80px auto 35px
+		span.main
+			line-height: 32px
+			margin: 0 auto 25px
+		.chest
+			position: static
+			width: 100%
+			margin: 30px auto 0
+			max-width: 400px
+			img
+				margin-left: -45px
+			button.open
+				display: none
+		a.menu-open
+			&:before
+				width: 55px
+				height: 55px
+			span.burger
+				left: -38px
+				top: 27px
+			span.text
+				display: none
+		.phone
+			display: none
+		span.phone-mobile
+			display: block
+			width: 55px
+			height: 55px
+			float: right
+			background-image: url("../img/phone-mobile.png")
+			background-repeat: no-repeat
+			background-position: center
+			background-color: #f3eae6
+			border-radius: 50%
+			position: relative
+			cursor: pointer
+			.phone-mob-inner
+				display: none
+				position: absolute
+				top: 70px
+				right: -15px
+				width: 100vw
+				padding: 0 15px
+				.cont
+					box-shadow: 0px 13px 44px 5px rgba(0, 0, 0,0.2)
+					border-radius: 20px
+					overflow: hidden
+				span.bg
+					width: 1px
+					height: 100%
+					position: absolute
+					left: 50%
+					margin-left: -2px
+					border-right: 1px solid #ebebea
+				&:before
+					content: ''
+					position: absolute
+					right: 25px
+					top: -10px
+					border-bottom: 12px solid #fff
+					border-right: 12px solid transparent
+					border-left: 12px solid transparent
+				span.number
+					font-family: 'UbuntuLight',sans-serif
+					font-size: 20px
+					margin-top: 5px
+				a
+					font-family: 'PlayfairDisplayItalic',sans-serif
+					font-size: 15px
+					color: $font-color
+					background-color: #fff
+					display: block			
+					width: 50%
+					float: left
+					padding: 20px 0 15px
+					&:hover
+						background-color: darken(#fff,10%)
+			&:hover
+				.phone-mob-inner	
+					display: block
+					
+	section.what-is 
+		background-image: none
+		padding: 40px 15px
+		.wrapper-inner
+			min-height: 600px
+		h2
+			font-size: 48px
+		span.main 
+			text-align: center
+			margin: 50px auto 100px
+			font-size: 21px
+			line-height: 30px
+		img
+			width: 600px
+			right: auto
+			bottom: -100px
+			left: 50%
+			margin-left: -270px
+
+	section.reviews
+		padding: 65px 0 20px
+		h3
+			font-size: 29px
+			line-height: 36px
+			padding: 0 15px
+		.slick-slide
+			.content
+				margin-top: 60px
+				height: 260px
+		.text
+			position: absolute
+			top: 0
+			width: 100vw
+			max-width: none
+			padding: 0 15px
+			margin: 0
+		.slick-arrow
+			display: none!important
+		.slick-dots
+			display: block!important
+			list-style-type: none
+			padding: 0
+			margin: 20px
+			li 
+				display: inline-block
+				&:last-child
+					button
+						margin-right: 0
+			button
+				width: 15px
+				height: 15px
+				border: 1px solid $accent
+				display: inline-block
+				font-size: 0
+				background: #fff
+				border-radius: 50%
+				margin-right: 9px
+			.slick-active
+				button
+					background-color: $accent
+
+	section.price
+		padding: 17px 0 0
+		h3
+			font-size: 29px
+			line-height: 36px
+			padding: 0 15px
+		.slideshow
+			height: 480px
+			a.buy
+				bottom: 15px
+			.navbutton 
+				top: 170px
+				background-color: $accent
+				border-radius: 0 75px 75px 0
+				width: 55px
+				height: 74px
+				&:hover
+					background-color: $accent
+				&:before,&:after
+					border-color: #fff
+					border-width: 2px	
+				&:before
+					top: 32px
+				&:after
+					top: 38px				
+		.slick-slider-price 
+			.content
+				padding-top: 10px
+			.slick-dots
+				bottom: 90px
+				text-align: center
+				left: 0
+				top: auto
+				width: 100%
+				li 
+					display: inline-block
+					margin-right: 25px
+					&:nth-child(3)
+						margin-right: 0	
+					button
+						width: 75px
+						height: 75px
+						border: 3px solid #cec0b7
+						position: relative
+						&:after
+							content: ''
+							position: absolute
+							width: 100%
+							height: 100%
+							top: 0
+							left: 0
+							border-radius: 50%
+							background: rgba(#fff,.46)
+					&.slick-active
+						button
+							width: 75px
+							height: 75px
+							&:after
+								display: none
+		ul.checkboxes
+			margin-top: 0
+			li 
+				margin: 30px 30px 0 0
+				&:nth-child(3)
+					margin-right: 0
+			svg
+				display: none
+			label
+				background-color: #f1e6de
+				border: 0
+				padding: 3px 30px 5px
+				span
+					color: #696969
+					border: 0
+				&.active
+					background-color: #b38159
+					span
+						color: #fff
+				
+	section.packet
+		padding: 30px 15px 40px
+		h3
+			font-size: 27px
+		ul
+			margin: 40px auto 0
+			padding: 0
+			display: inline-block
+		img
+			position: static
+			margin: -80px auto 0
+			display: block
+		a.other
+			margin: -20px 0 0
+		.mobile-packet-form
+			display: block
+			text-align: center
+			max-width: 350px
+			margin: 0 auto 40px
+			border-bottom: 1px solid #382f28
+			span
+				font-family: 'UbuntuLight',sans-serif
+				font-size: 18px
+				color: #fff
+				line-height: 24px
+				font-weight: normal
+				margin-bottom: 30px
+			input
+				display: block
+				margin: 0 auto 30px 
+				background-color: #454444
+				border: 0
+				color: #b8b8b8
+				&:focus
+					background-color: #FFF
+					color: #3c3c3c
+			button
+				width: 255px
+				margin-bottom: 50px
+	
+	section.vip
+		padding: 50px 0
+		h3
+			font-size: 27px
+			line-height: 37px
+			padding: 0 15px
+		img.vip-img
+			display: none
+		.advantages
+			padding: 0
+			margin-top: 40px
+			width: 100%
+			border-radius: 0
+			position: relative
+			box-shadow: 0 0px 10px 0 rgba(0,0,0,.12)		
+			&:before
+				content: ''
+				position: absolute
+				top: -26px
+				width: 66px
+				background-color: #fff
+				left: 50%
+				margin-left: -33px
+				height: 66px
+				border-radius: 30px 30px 0 0
+				box-shadow: 0 -15px 20px 0 rgba(0,0,0,.05)
+			&:after
+				content: ''
+				position: absolute
+				background-image: url("../img/crown-icon.png")
+				background-repeat: no-repeat
+				background-size: 32px 20px
+				background-position: center
+				border-radius: 50%
+				width: 50px
+				height: 50px
+				left: 50%
+				background-color: #fff
+				margin-left: -25px
+				top: -18px
+			ul
+				border-top: 1px solid #dbc3b0
+				margin: 7px 0 0
+				padding: 25px 15px 250px
+				position: relative
+				&:after
+					content: ''
+					width: 50px
+					position: absolute
+					height: 50px
+					left: 50%
+					top: -28px
+					border-radius: 50%
+					z-index: 22
+					margin-left: -26px
+					border: 1px solid #dbc3b0
+					clip: rect(0, 28px, 60px, 0)
+					transform: rotate(90deg)
+				img
+					position: absolute
+					display: block
+					bottom: -40px
+					left: 50%
+					margin-left: -275px
+				li 
+					width: 50%
+					float: left
+					text-align: center
+					min-height: 45px
+					margin-bottom: 15px
+					&:nth-child(1)
+						display: none
+		form.main
+			margin-top: 90px
+			padding: 0 15px
+			input
+				margin: 30px auto
+				display: block
+			button
+				margin: 0
+				width: 255px
+
+@media only screen and (max-height : 768px)
+	section.main-header
+		.details
+			.inner
+				height: 100%
+				position: relative
+				margin-top: 0
+				top: auto
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	section.main-header span.phone-mobile .phone-mob-inner
+		span.number
+			font-size: 16px
+	
+	section.price
+		.slideshow a.buy
+			bottom: 35px
+		.slick-slider-price 
+			.slick-dots
+				bottom: 120px
+			.content 
+				padding-top: 40px
+				img
+					max-width: 200px
+		ul.checkboxes
+			li 
+				margin: 30px 10px 0 0
+				label
+					padding: 3px 20px 5px
+				&:nth-child(3)
+					margin-right: 0
+	
+	.popup-form
+		.mfp-close
+			right: 15px
+			top: -35px
+		.inner
+			padding: 20px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 400px)
+	.menu
+		.menu-inner-center
+			a 
+				padding-left: 0
+
+	section.what-is
+		span.main 
+			margin-bottom: 20px
+		img
+			width: 500px
+			bottom: -20px
+			margin-left: -210px
+
+	section.vip
+		.advantages
+			ul
+				padding-bottom: 220px
+				img
+					position: absolute
+					display: block
+					bottom: -37px
+					left: 50%
+					width: 500px
+					margin-left: -250px
+
+@media only screen and (max-width : 380px)
+	.popup-form
+		width: 100%
+		.inner
+			padding: 20px
+
+	section.packet
+		ul
+			li
+				padding-left: 100px
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<!-- Template Basic Images End -->
+
+	<!-- Header CSS (first screen styles from header.min.css) - inserted in the build of the project -->
+	<style>@@include('header.min.css')</style>
+
+	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+
+	<!-- Load Fonts CSS Start -->
+	<script>
+		loadCSS( "css/fonts.min.css?ver=1.0.0", false, "all" ); // Loading fonts, if the site is located in a subfolder
+		// loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" ); // Loading fonts, if the site is at the root
+	</script>
+	<!-- Load Fonts CSS End -->
+
+	<!-- Load Custom CSS Start -->
+	<!--<Deject>--><script>loadCSS( "header.min.css?ver=1.0.0", false, "all" );</script><!--</Deject>-->
+	<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
+	<!-- Load Custom CSS End -->
+
+	<!-- Load Custom CSS Compiled without JS Start -->
+	<noscript>
+		<link rel="stylesheet" href="css/fonts.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+	</noscript>
+	<!-- Load Custom CSS Compiled without JS End -->
+
+	<!-- Custom Browsers Color Start -->
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	<!-- Custom Browsers Color End -->
+
+</head>
+
+<body>
+
+	<div id="menu" class="menu">
+		<div class="menu-inner">
+			<button class="close close-mob"></button>
+			<div class="menu-inner-center">
+				<button class="close"><span></span></button>
+				<nav>
+					<ul>
+						<li><a href="#">Что такое комодик</a></li>
+						<li><a href="#">Отзывы</a></li>
+						<li><a href="#">Наши комодики</a></li>
+						<li><a href="#">Все включено</a></li>
+						<li><a href="#">VIP Комодик</a></li>
+						<li><a href="#">Фотографии производства</a></li>
+						<li><a href="#">Задайте вопрос</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<div id="details" class="details">
+		<button class="close"><span></span></button>
+		<div class="inner">
+			<h3>Что такое<br>комодик?</h3>
+			<img src="img/details.jpg" alt="">
+			<p>Всемирное антидопинговое агентство (WADA) заявило, что российская группа хакеров Fancy Bear незаконно получила доступ к его базе данных ADAMS.</p>
+			<p>Из документов, опубликованных Fancy Bear следует, что что теннисистки Серена и Винус Уильямс, гимнастка Симона Байлз и баскетболистка Елена Делле Донн с разрешения WADA принимали запрещенные препараты в терапевтических целях.</p>
+		</div>
+	</div>
+
+	<section class="main-header">
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<div class="top-line">
+					<a href="#menu" id="menu-open" class="menu-open"><span class="text">Меню</span><span class="burger"></span></a>
+					<span class="title">Komodik</span>
+					<span class="phone-mobile">
+						<div class="phone-mob-inner">
+							<span class="cont clearfix">
+								<a href="tel:84952235511" class="left">
+									<span>Телефон</span>
+									<span class="number">8 495 223 55 11</span>
+								</a>
+								<span class="bg"></span>
+								<a href="tel:+79942422312" class="right">
+									<span>Whatsapp</span>
+									<span class="number">+7 994 242 23 12</span>
+								</a>
+							</span>
+						</div>
+					</span>
+					<div class="phone">
+						<span class="phone-number">8 495 223 55 11</span>
+						<span class="phone-number">+7 994 242 23 12</span>
+					</div>
+				</div>
+				<h1>Не знаешь что ей подарить?</h1>
+				<span class="main">Все девочки хотят стильный комодик!</span>
+				<a href="#details" id="details-open" class="main"><span></span>Подробнее</a>
+				<div class="chest">
+					<button id="open-chest" class="open clearfix">
+						<span class="first">Открыть</span><br>
+						<span class="second">Комодик</span>
+					</button>
+					<img src="img/chest-closed.png" class="chest-closed" alt="">
+					<img src="img/chest-open.png" class="chest-open hidden" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="what-is">
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<h2 class="white">Комодик?</h2>
+				<span class="main white">Комодик нужен девушке, чтобы по полочкам разложить все украшения</span>
+				<img src="img/what-is-chest.png" alt="">
+			</div>
+		</div>
+	</section>
+
+	<section class="reviews">
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<h3>Им уже подарили комодик!</h3>
+				<div class="slick-slider">
+					<div>
+						<div class="content">
+							<button class="play"></button>
+							<img src="img/slider-img.jpg" alt="">
+						</div>
+						<div class="text">
+							<span class="name">Виктория</span>
+							<span class="name-subtitle">Москва</span>
+						</div>
+					</div>
+					<div>
+						<div class="content">
+							<button class="play"></button>
+							<img src="img/slider-img.jpg" alt="">
+						</div>
+						<div class="text">
+							<span class="name">Виктория</span>
+							<span class="name-subtitle">Москва</span>
+						</div>
+					</div>
+					<div>
+						<div class="content">
+							<button class="play"></button>
+							<img src="img/slider-img.jpg" alt="">
+						</div>
+						<div class="text">
+							<span class="name">Виктория</span>
+							<span class="name-subtitle">Москва</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="price">
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<h3>Закажите один из стандартных комодиков</h3>
+				<ul class="checkboxes">
+					<li>
+						<input type="checkbox" id="first" class="checkbox">
+						<label for="first"><span>14990</span></label>				
+					</li>
+					<li>
+						<input type="checkbox" checked="checked" id="second" class="checkbox">
+						<label class="active checked" id="for-check" for="second"><span>4990</span></label>
+						<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M16.667,62.167c3.109,5.55,7.217,10.591,10.926,15.75 c2.614,3.636,5.149,7.519,8.161,10.853c-0.046-0.051,1.959,2.414,2.692,2.343c0.895-0.088,6.958-8.511,6.014-7.3 c5.997-7.695,11.68-15.463,16.931-23.696c6.393-10.025,12.235-20.373,18.104-30.707C82.004,24.988,84.802,20.601,87,16" style="stroke-dasharray: 126.37, 126.37; stroke-dashoffset: 0; transition: stroke-dashoffset 0.2s ease-in-out 0s;"></path></svg>
+					</li>
+					<li>
+						<input type="checkbox" id="third" class="checkbox">
+						<label for="third"><span>9990</span></label>						
+					</li>
+				</ul>
+				<div id="slideshow" class="slideshow">
+					<div class="slide">
+						<span class="slide__title slide__title--preview"></span>
+						<div class="slide__item">
+							<div class="slide__inner">
+								<div class="container">
+									<div class="slick-slider-price">
+										<div>
+											<div class="content">
+												<img src="img/price-img.png" alt="">
+											</div>
+										</div>
+										<div>
+											<div class="content">
+												<img src="img/price-img.png" alt="">
+											</div>
+										</div>
+										<div>
+											<div class="content">
+												<img src="img/price-img.png" alt="">
+											</div>
+										</div>
+									</div>
+									<a href="#popup-form" class="popup other buy">Купить</a>
+								</div>
+								<button class="action action--open" aria-label="View details"><i class="fa fa-plus"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="slide__title slide__title--preview"></div>
+						<div class="slide__item">
+							<div class="slide__inner">
+								<div class="container">
+									<div class="slick-slider-price">
+										<div>
+											<div class="content">
+												<img src="img/price-img.png" alt="">
+											</div>
+										</div>
+										<div>
+											<div class="content">
+												<img src="img/price-img.png" alt="">
+											</div>
+										</div>
+										<div>
+											<div class="content">
+												<img src="img/price-img.png" alt="">
+											</div>
+										</div>
+									</div>
+									<a href="#popup-form" class="popup other buy">Купить</a>
+								</div>
+								<button class="action action--open" aria-label="View details"><i class="fa fa-plus"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="slide__title slide__title--preview"></div>
+						<div class="slide__item">
+							<div class="slide__inner">
+								<div class="container">
+									<div class="slick-slider-price">
+										<div>
+											<div class="content">
+												<img src="img/price-img.png" alt="">
+											</div>
+										</div>
+										<div>
+											<div class="content">
+												<img src="img/price-img.png" alt="">
+											</div>
+										</div>
+										<div>
+											<div class="content">
+												<img src="img/price-img.png" alt="">
+											</div>
+										</div>
+									</div>
+									<a href="#popup-form" class="popup other buy">Купить</a>
+								</div>
+								<button class="action action--open" aria-label="View details"><i class="fa fa-plus"></i></button>
+							</div>
+						</div>
+					</div>
+					<button class="action action--close" aria-label="Close"><i class="fa fa-close"></i></button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="packet">
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<form id="packet-form" class="dark mobile-packet-form main">
+					<div class="inner">
+						<span>Оставьте свои контактные данные для заказа</span>
+						<input type="text" class="name" placeholder="Имя">
+						<input type="text" class="phone" placeholder="Телефон">
+						<input type="hidden" value="packet-form">
+						<button class="other">Заказать</button>
+					</div>
+				</form>
+				<h3 class="white">Пакет "Все влючено" гарантирует идеальное поздравление</h3>
+				<ul>
+					<li>Бесплатная доставка в пределах мкад</li>
+					<li>Подарочная упаковка в любом цвете</li>
+					<li>Букет цветов от наших партнеров</li>
+				</ul>
+				<img src="img/packet-img.png" alt="">
+				<a href="#" class="other">Заказать "Все включено"</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="vip">
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<h3>VIP комодик на любой каприз</h3>
+				<div class="advantages">
+					<div class="advantages-inner clearfix">
+						<img src="img/vip-img.png" alt="" class="vip-img">
+						<ul class="clearfix">
+							<li><span></span></li>
+							<li>Любая порода дерева</li>
+							<li>Стразы Сваровски</li>
+							<li>Позолота</li>
+							<li>Гравировка имени и поздравления</li>
+							<img src="img/vip-img-mobile.png" class="hidden" alt="">
+						</ul>
+					</div>
+				</div>
+				<form id="vip-form" class="main">
+					<span>Заполните ваши контактные данные и рассчитайте стоимость комодика для Вас!</span>
+					<input type="text" class="name" placeholder="Имя">
+					<input type="text" class="phone" placeholder="Телефон">
+					<input type="hidden" value="vip-form">
+					<button class="other">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<section class="fotos">
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<h3>Фотографии нашего производства</h3>
+				<div class="slick-slider-fotos">
+					<div>
+						<div class="slide-inner">
+							<img src="img/slider-foto-1.jpg" alt="">
+						</div>
+					</div>
+					<div>
+						<div class="slide-inner">
+							<img src="img/slider-img.jpg" alt="">
+						</div>
+					</div>
+					<div>
+						<div class="slide-inner">
+							<img src="img/slider-foto-2.jpg" alt="">
+						</div>
+					</div>
+					<div>
+						<div class="slide-inner">
+							<img src="img/slider-foto-3.jpg" alt="">
+						</div>
+					</div>
+					<div>
+						<div class="slide-inner">
+							<img src="img/slider-img.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="saw"></div>
+				<span class="slide-number"><span class="current">1</span> <span class="from">из</span> <span class="count"></span>5</span>
+				<div class="slick-slider-comment hidden">
+					<div>
+						<div class="text-block">
+							<h4>Полировка</h4>
+							<p>Старый приятель Сэта, известный актер Дэвид Норт, приезжает в Кэбот Коув, чтобы поставить спектакль в местном театре. </p>
+							<p>Стоило начаться репетициям, как происходит убийство - менеджера Норта Эрика Бендерсона смертельно ранят за кулисами. Разумеется, Джессика намерена выяснить, кто сделал это и почему.</p>
+						</div>
+					</div>
+					<div>
+						<div class="text-block">
+							<h4>Полировка 2</h4>
+							<p>Старый приятель Сэта, известный актер Дэвид Норт, приезжает в Кэбот Коув, чтобы поставить спектакль в местном театре. </p>
+							<p>Стоило начаться репетициям, как происходит убийство - менеджера Норта Эрика Бендерсона смертельно ранят за кулисами. Разумеется, Джессика намерена выяснить, кто сделал это и почему.</p>
+						</div>
+					</div>
+					<div>
+						<div class="text-block">
+							<h4>Полировка 3</h4>
+							<p>Старый приятель Сэта, известный актер Дэвид Норт, приезжает в Кэбот Коув, чтобы поставить спектакль в местном театре. </p>
+							<p>Стоило начаться репетициям, как происходит убийство - менеджера Норта Эрика Бендерсона смертельно ранят за кулисами. Разумеется, Джессика намерена выяснить, кто сделал это и почему.</p>
+						</div>
+					</div>
+					<div>
+						<div class="text-block">
+							<h4>Полировка 4</h4>
+							<p>Старый приятель Сэта, известный актер Дэвид Норт, приезжает в Кэбот Коув, чтобы поставить спектакль в местном театре. </p>
+							<p>Стоило начаться репетициям, как происходит убийство - менеджера Норта Эрика Бендерсона смертельно ранят за кулисами. Разумеется, Джессика намерена выяснить, кто сделал это и почему.</p>
+						</div>
+					</div>
+					<div>
+						<div class="text-block">
+							<h4>Полировка 4</h4>
+							<p>Старый приятель Сэта, известный актер Дэвид Норт, приезжает в Кэбот Коув, чтобы поставить спектакль в местном театре. </p>
+							<p>Стоило начаться репетициям, как происходит убийство - менеджера Норта Эрика Бендерсона смертельно ранят за кулисами. Разумеется, Джессика намерена выяснить, кто сделал это и почему.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="footer form">
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<h3 class="white">Остались вопросы?</h3>
+				<form id="footer-form" class="dark">
+					<p>Напишите сюда свой вопрос и мы ответим на него в течении 30 минут</p>
+					<textarea placeholder="Ваш вопрос"></textarea>
+					<input type="text" class="name" placeholder="Имя">
+					<input type="text" class="phone" placeholder="Телефон">
+					<input type="hidden" value="footer-form">
+					<button class="other">Отправить</button>
+				</form>
+				<div class="bottom">
+					<ul class="social">
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+					</ul>
+					<div class="hidden">
+						<img src="img/fb-hover.png" alt="">
+						<img src="img/inst-hover.png" alt="">
+						<img src="img/vk-hover.png" alt="">
+					</div>
+					<ul class="address">
+						<li>г. Москва, Варшавское шоссе 1c</li>
+						<li>gidrolant@gmail.com</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+	</section>
+
+	<div class="hidden">
+
+		<form id="popup-form" class="popup-form main">
+			<div class="inner">
+				<h5>Оставьте свои контактные данные</h5>
+				<span>и мы вам перезвоним</span>
+				<input type="text" class="name" placeholder="Имя">
+				<input type="text" class="phone" placeholder="Телефон">
+				<input type="hidden" value="popup-form">
+				<button class="other">Отправить</button>
+			</div>
+		</form>
+
+	</div>
+
+	<!-- Optimized loading JS Start -->
+	<script>var scr = {"scripts":[
+		{"src" : "js/libs.min.js", "async" : false},
+		{"src" : "js/common.js", "async" : false}
+		]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+	</script>
+	<!-- Optimized loading JS End -->
+
+</body>
+</html>

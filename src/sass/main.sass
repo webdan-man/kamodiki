@@ -1,0 +1,647 @@
+@import "bourbon"
+@import "vars"
+@import "libs"
+
+section.what-is
+	background-image: url("../img/what-is-bg.png")
+	background-position: 0 0
+	background-color: #1d1d1d
+	background-size: auto
+	text-align: center
+	span.main
+		max-width: 400px
+		text-align: left
+		margin-top: 50px
+		position: relative
+		z-index: 1
+	img
+		position: absolute
+		right: -280px
+		bottom: -40px
+
+section.reviews
+	background-color: #f7f6f7
+	.slick-dots
+		display: none!important
+
+.slick-slider
+	position: relative
+	max-width: 740px
+	width: 100%
+	margin: 25px auto
+	.slick-slide
+		&:focus
+			outline: none
+		.content
+			height: 395px
+			width: 100%
+			overflow: hidden
+			position: relative
+			button.play
+				position: absolute
+				top: 50%
+				left: 50%
+				height: 68px
+				width: 68px
+				margin: -34px 0 0 -34px
+				background-color: #fff 
+				border-radius: 50%
+				border: 0
+				cursor: pointer
+				&:after
+					position: absolute
+					content: ''
+					left: 50%
+					top: 50%
+					margin-top: -6px
+					margin-left: -4px
+					border-left: 11px solid $accent
+					border-top: 7px solid transparent
+					border-bottom: 7px solid transparent
+	.slick-arrow
+		position: absolute
+		bottom: 0px
+		width: 46px
+		height: 46px
+		border: 0
+		background-color: transparent
+		border-radius: 50%
+		border: 2px solid $accent
+		cursor: pointer
+		z-index: 10
+		transition: opacity .25s
+		font-size: 0
+		&:hover
+			background-color: #f4ece6
+		&:before,&:after
+			position: absolute
+			content: ''
+			border-bottom: 1px solid $accent
+			width: 10px
+		&:before
+			transform: rotate(-45deg)
+			left: 15px
+			top: 17px
+		&:after
+			transform: rotate(45deg)
+			left: 15px
+			top: 24px
+	.slick-next
+		right: 180px
+		transform: rotateY(180deg)
+	.slick-prev
+		left: 180px
+	.text
+		max-width: 275px
+		margin: 20px auto 0
+
+section.price
+	background-image: url("../img/price-bg.jpg")
+	ul
+		list-style-type: none
+		margin: 20px 0 0
+		padding: 0
+	li 
+		position: relative
+		display: inline-block
+		margin-right: 50px
+		&:nth-child(3)
+			margin-right: 0
+		input
+			position: absolute
+			top: 10px
+			left: 14px
+			opacity: 0
+	label			
+		padding: 1px 30px 5px 35px
+		display: inline-block
+		position: relative
+		border-radius: 20px
+		box-sizing: border-box
+		cursor: pointer
+		border: 2px solid transparent
+		transition: all, .25s
+		min-height: 37px
+		&:hover
+			border: 2px solid $accent
+			span
+				border: 0
+		&.active
+			border: 2px solid $accent
+			span
+				border: 0
+		span
+			font-family: 'PlayfairDisplayItalic',sans-serif
+			font-size: 17px
+			color: $font-color
+			border-bottom: 1px dotted $font-color
+			line-height: 25px
+	svg
+		width: 12px
+		height: 12px
+		pointer-events: none
+		position: absolute
+		top: 12px
+		left: 17px
+		path
+			stroke: $accent
+			stroke-width: 13px
+			stroke-linecap: round
+			stroke-linejoin: round
+			fill: none
+	.slick-slider-price
+		max-width: 900px
+		margin: auto
+		position: relative
+		.slick-track
+			max-width: 860px!important
+			width: 100%!important
+		.slick-slide
+			width: 100%
+			max-width: 860px
+		.slick-arrow
+			display: none
+		.slick-dots
+			position: absolute
+			top: 130px
+			left: 240px
+			margin: 0
+			li 
+				display: block
+				margin: 0
+				button
+					width: 10px
+					height: 10px
+					background-color: transparent
+					border: 1px solid $accent
+					font-size: 0
+					border-radius: 50%
+					padding: 0
+					cursor: pointer
+				&.slick-active
+					button
+						width: 14px
+						height: 14px
+						background-color: $accent
+		.content
+			height: 420px
+			padding: 50px 0 70px
+			position: relative
+			img
+				margin: auto
+		.slick-arrow
+			bottom: 210px
+		.slick-next
+			right: 0
+		.slick-prev
+			left: 0
+	.slideshow
+		width: 100%
+		margin: 0
+		height: 420px
+		overflow: hidden
+		position: relative
+		a.buy
+			bottom: 70px
+			left: 50%
+			position: absolute
+			margin-left: -78px
+		.slick-slide:not(.slick-current)
+			position: absolute!important
+		.container
+			position: relative
+			width: 100%
+			max-width: 860px
+			padding-top: 20px
+		.slide
+			width: 100%
+		.deco
+			display: none
+		.navbutton
+			position: absolute
+			width: 46px
+			height: 46px
+			border: 0
+			top: 240px
+			background-color: transparent
+			border-radius: 50%
+			border: 2px solid $accent
+			cursor: pointer
+			z-index: 10
+			transition: opacity .25s
+			transform: none
+			left: auto
+			right: auto
+			z-index: 1100
+			&:hover
+				background-color: #f4ece6
+			svg
+				display: none
+			&:before,&:after
+				position: absolute
+				content: ''
+				border-bottom: 1px solid $accent
+				width: 10px
+			&:before
+				transform: rotate(-45deg)
+				left: 15px
+				top: 17px
+			&:after
+				transform: rotate(45deg)
+				left: 15px
+				top: 24px
+		.navbutton--prev
+			left: 0	
+		.navbutton--next
+			right: 0
+			transform: rotate(180deg)
+		.action--close,.action--open
+			display: none
+
+section.packet
+	background-color: #1d1d1d
+	.mobile-packet-form
+		display: none
+	h3
+		font-size: 35px
+		max-width: 640px
+		margin-bottom: 40px
+	img
+		position: absolute
+		right: -80px
+		top: 30px
+	a.other
+		position: relative
+		z-index: 1
+		margin-top: 40px
+	ul
+		list-style-type: none
+		margin-top: 70px
+		padding-left: 70px
+	li 
+		font-family: 'UbuntuLight',sans-serif
+		font-size: 19px
+		line-height: 27px
+		margin-bottom: 45px
+		color: #fff 
+		max-width: 340px
+		padding-left: 110px
+		box-sizing: border-box
+		text-align: left
+		position: relative
+		&:before
+			width: 110px
+			height: 70px
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+		&:nth-child(1):before
+			background-image: url("../img/packet-icon-1.png")
+			background-repeat: no-repeat
+		&:nth-child(2):before
+			background-image: url("../img/packet-icon-2.png")
+			background-repeat: no-repeat
+			background-position: 7px 4px
+		&:nth-child(3):before
+			background-image: url("../img/packet-icon-3.png")
+			background-repeat: no-repeat
+			background-position: 10px 0
+
+section.vip
+	background-image: url("../img/vip-bg.jpg")
+	h3
+		font-size: 35px
+	.advantages
+		border-radius: 18px
+		box-shadow: 10px 17.321px 20px 0px rgba(0, 0, 0, 0.031)
+		width: 600px
+		margin: 15px auto 0
+		padding: 20px 0 10px
+		background-color: #fff
+	.advantages-inner
+		position: relative
+		img.vip-img
+			position: absolute
+			top: -35px
+			left: -180px
+	ul
+		margin: 0
+		list-style-type: none
+		float: right
+		display: inline-block
+		padding: 0
+		margin: 0 45px 0 0
+	li 
+		font-family: 'UbuntuLight',sans-serif
+		font-size: 18px
+		color: $font-color
+		text-align: left
+		margin-bottom: 25px
+		line-height: normal
+		span
+			width: 39px
+			height: 26px
+			background-image: url("../img/crown-icon.png")
+			background-repeat: no-repeat
+	form
+		margin-top: 140px
+		input
+			margin: 30px 35px 0 0
+		span
+			font-family: 'UbuntuRegular',sans-serif
+			font-size: 16px
+			color: $font-color
+		button
+			margin-top: 30px
+
+form.main
+	input
+		color: #3c3c3c
+		font-family: 'UbuntuLight',sans-serif
+		font-size: 16px
+		border: 1px solid #dedede
+		border-radius: 35px
+		padding: 15px 40px
+		line-height: normal
+		box-sizing: border-box
+		width: 255px
+		&.name
+			background-image: url("../img/form-icon-1.png")
+			background-repeat: no-repeat
+			background-position: 14px center
+		&.phone
+			background-image: url("../img/form-icon-2.png")
+			background-repeat: no-repeat
+			background-position: 14px center
+
+section.fotos
+	h3
+		font-size: 35px
+	.wrapper
+		max-width: none
+		.saw
+			position: absolute
+			bottom: 33px
+			width: 132px
+			height: 132px
+			background-image: url("../img/slider-icon.png")
+			background-repeat: no-repeat
+			left: 50%
+			margin-left: -66px
+			z-index: 1
+		span
+			display: inline-block
+		span.slide-number
+			position: absolute
+			bottom: 58px
+			left: 50%
+			margin-left: -20px
+			font-family: 'UbuntuBold',sans-serif
+			font-size: 16px
+			z-index: 3
+			span.from
+				color: #b38159
+				font-family: 'PlayfairDisplayItalic',sans-serif
+	.slick-slider-fotos
+		max-width: none
+		position: relative
+		z-index: 2
+		.slick-arrow
+			bottom: -60px
+			border: 2px solid transparent
+		.slick-next
+			right: 50%
+			margin-right: -120px
+		.slick-prev
+			left: 50%
+			margin-left: -120px
+		.slick-slide
+			width: 900px
+			overflow: hidden
+			height: 395px
+			opacity: .35
+			-webkit-filter: grayscale(100%)
+			-moz-filter: grayscale(100%)
+			-ms-filter: grayscale(100%)
+			-o-filter: grayscale(100%)
+			filter: grayscale(100%)
+			&.slick-current
+				opacity: 1
+				filter: none
+			.slide-inner
+				max-height: 395px
+				overflow: hidden
+				position: relative
+				max-width: 826px
+				margin: auto
+			img
+				width: 100%
+				box-sizing: border-box
+				height: auto
+	.slick-slider-comment
+		background-color: transparent
+		max-width: 826px
+		margin: auto
+		position: absolute
+		top: 105px
+		left: 50%
+		margin-left: -413px
+		z-index: 2
+		.text-block
+			width: 330px
+			height: 395px
+			background-color: #1d1d1d
+			float: right
+			padding: 30px 38px
+			p 
+				font-family: 'UbuntuLight',sans-serif
+				font-size: 16px
+				color: #dbdbdb
+				text-align: left
+				line-height: 20px
+
+section.form
+	background-image: url("../img/form-bg.jpg")
+	h3
+		font-size: 35px
+	p 
+		color: #fff
+		max-width: 500px
+		font-size: 19px
+		font-family: 'UbuntuLight',sans-serif
+		margin: 15px auto 28px
+		line-height: 24px
+		position: relative
+		&:after
+			position: absolute
+			top: 9px
+			left: -43px
+			content: ''
+			background-image: url("../img/form-arrow.png")
+			background-repeat: no-repeat
+			width: 38px
+			height: 37px
+	input,textarea
+		outline: none
+		font-size: 17px
+		border-radius: 30px
+		background-color: #454444
+		border: 0
+		color: #b8b8b8
+	input
+		padding: 15px 40px
+		line-height: normal
+		box-sizing: border-box
+		margin: 25px 35px 0 0
+		width: 255px
+		&.name
+			background-image: url("../img/form-icon-1.png")
+			background-repeat: no-repeat
+			background-position: 14px center
+		&.phone
+			background-image: url("../img/form-icon-2.png")
+			background-repeat: no-repeat
+			background-position: 14px center
+	button
+		width: 165px
+		padding: 15px 0
+		margin: 25px 0 0
+	textarea
+		resize: none
+		width: 100%
+		max-width: 750px
+		min-height: 155px
+		padding: 28px 32px
+		box-sizing: border-box
+		border-radius: 20px
+	.bottom
+		width: 750px
+		margin: auto
+		text-align: left
+	ul.address
+		padding: 0
+		display: inline-block
+		margin: 0 0 0 180px
+		li 
+			margin: 8px 0 0
+			background-repeat: no-repeat
+			color: #fff
+			display: block
+			padding-left: 28px
+		li:nth-child(1)
+			background-image: url("../img/marker.png")
+			background-position: 3px 5px
+		li:nth-child(2)
+			background-image: url("../img/mail.png")
+			background-position: 0px 8px
+	ul.social
+		padding: 0
+		display: inline-block
+		margin: 0
+	li 
+		display: inline-block
+		a
+			background-repeat: no-repeat
+			display: inline-block
+			width: 40px
+			height: 40px
+			margin: 30px 18px 0 0
+	li:nth-child(1)
+		a
+			background-image: url("../img/fb.png")
+			&:hover
+				background-image: url("../img/fb-hover.png")
+	li:nth-child(2)
+		a
+			background-image: url("../img/inst.png")		
+			&:hover
+				background-image: url("../img/inst-hover.png")
+	li:nth-child(3)
+		a
+			background-image: url("../img/vk.png")
+			margin-right: 0
+			&:hover
+				background-image: url("../img/vk-hover.png")
+	
+form.dark	
+	::-webkit-input-placeholder
+		color: #b8b8b8
+	:-moz-placeholder
+		color: #b8b8b8
+	::-moz-placeholder
+		color: #b8b8b8
+	:-ms-input-placeholder
+		color: #b8b8b8
+	input:focus,textarea:focus
+		background-color: #FFF
+		color: #3c3c3c
+		box-shadow: 5px 8.66px 40px 0px rgba(115, 73, 30, 0.137)
+
+.popup-form
+	width: 355px
+	border-radius: 30px
+	background-color: #FFF
+	margin: auto
+	padding: 2px
+	text-align: center
+	position: relative
+	box-sizing: content-box
+	.mfp-close
+		position: absolute
+		right: -30px
+		top: -20px
+		margin: 0
+		font-size: 0
+		&:before,&:after
+			width: 18px
+			content: ''
+			position: absolute
+			top: 15px
+			left: 15px
+			border-bottom: 1px solid #fff
+			transform: rotate(45deg)
+		&:after
+			transform: rotate(-45deg)
+	.inner
+		border-radius: 30px
+		border: 1px solid #d2c0a6
+		padding: 35px 45px
+	input
+		margin-bottom: 20px
+	button
+		margin-top: 15px
+	span
+		font-size: 19px
+		color: $font-color
+		font-family: 'UbuntuLight',sans-serif
+		margin-bottom: 35px
+
+.mfp-container
+	padding: 0
+.mfp-fade.mfp-bg
+	opacity: .6
+	background: #000
+	transition: all .25s
+	z-index: 1111
+.mfp-counter
+	visibility: hidden
+
+.mfp-wrap
+	z-index: 1111
+
+.mfp-fade.mfp-bg.mfp-ready
+	opacity: .4
+.mfp-fade.mfp-bg.mfp-removing
+	opacity: 0
+
+.mfp-fade.mfp-wrap .mfp-content
+	opacity: 0
+	transition: all .5s
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content
+	opacity: 1
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content
+	opacity: 0
+
+@import "media"

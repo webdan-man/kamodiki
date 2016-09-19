@@ -1,0 +1,226 @@
+@import "bourbon"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #626262
+	opacity: 1
+	font-family: 'PlayfairDisplayItalic',sans-serif
+	font-size: 16px
+
+*:-moz-placeholder
+	color: #626262
+	opacity: 1
+	font-family: 'PlayfairDisplayItalic',sans-serif
+	font-size: 16px
+
+*::-moz-placeholder
+	color: #626262
+	opacity: 1
+	font-family: 'PlayfairDisplayItalic',sans-serif
+	font-size: 16px
+
+*:-ms-input-placeholder
+	color: #626262
+	opacity: 1
+	font-family: 'PlayfairDisplayItalic',sans-serif
+	font-size: 16px
+
+::selection
+	background-color: $accent
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: $default-font
+	overflow-x: hidden
+	font-weight: normal!important
+	margin: 0
+	color: $font-color
+
+section
+	height: 100vh
+	width: 100%
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	position: relative
+	min-height: 650px
+	overflow: hidden
+	transition: transform 0.5s 0s
+	display: block
+	text-align: center
+	padding: 0 50px
+	box-sizing: border-box
+	&.nav-is-open
+		transform: translateX(750px)
+
+.clearfix:after
+  content: ""
+  display: table
+  clear: both
+
+.wrapper
+	max-width: 900px
+	height: 100%
+	position: relative
+	margin: 0 auto
+
+.wrapper-inner
+	width: 100%
+	min-height: 600px
+	position: absolute
+	top: 50%
+	margin: -300px auto 0
+
+.hidden
+	display: none
+
+span
+	display: block
+
+a
+	text-decoration: none
+	outline: none!important
+	transition: all .25s
+	box-sizing: border-box
+
+div
+	box-sizing: border-box!important
+
+input
+	outline: none!important
+
+button
+	outline: none!important
+
+a.main 
+	color: #272727
+	font-family: 'UbuntuBold',sans-serif
+	font-size: 14px
+	text-transform: uppercase
+	padding: 13px 25px
+	border: 2px solid $accent
+	border-radius: 25px
+	display: inline-block
+	background-color: #fcf8f9
+	&:hover
+		background-color: $accent
+		color: #fff
+
+a.other,button.other
+	font-family: 'UbuntuBold',sans-serif
+	font-size: 14px
+	text-transform: uppercase
+	padding: 15px 44px
+	border-radius: 30px
+	min-height: 50px
+	display: inline-block
+	border: 0
+	color: #fff
+	background-color: $accent
+	letter-spacing: 2px
+	cursor: pointer
+	box-shadow: 16px 2px 97px -20px rgba(179,129,90,1)
+	&:hover
+		box-shadow: 16px 2px 97px -18px rgba(115, 73, 30, 1)
+		color: #e9c8ae
+		background-color: #a3714a
+
+span.main
+	font-size: 26px
+	line-height: 36px
+	&.white
+		color: #fff
+
+h1
+	font-size: 47px
+	font-family: 'PlayfairDisplayBold',sans-serif
+	text-transform: uppercase
+	max-width: 450px
+	line-height: 60px
+	margin: 110px 0 40px
+
+h2,h3
+	font-family: 'PlayfairDisplayBold',sans-serif	
+	position: relative
+	display: inline-block
+	margin-left: auto
+	margin-right: auto
+	color: $font-color
+	margin-top: 0
+	&.white
+		color: #fff
+	&:after
+		content: ''
+		position: absolute
+		bottom: -30px
+		left: 50%
+		width: 80px
+		margin-left: -40px
+		border-bottom: 2px solid $accent
+
+h3
+	font-size: 40px
+	line-height: 45px
+
+h2
+	font-size: 60px
+	&:after
+		bottom: -20px
+
+h4
+	color: #dbdbdb
+	font-size: 20px
+	font-family: 'PlayfairDisplayItalic',sans-serif
+	text-transform: uppercase
+	position: relative
+	text-align: left
+	margin: 0 0 38px
+	&:after
+		content: ''
+		position: absolute
+		bottom: -20px
+		left: 0
+		width: 48px
+		border-bottom: 2px solid #775941
+
+h5
+	font-size: 22px
+	font-family: 'UbuntuBold',sans-serif
+	margin: 0
+	line-height: 28px
+
+span.title
+	font-family: 'PlayfairDisplayBlack',sans-serif
+	font-size: 20px
+	display: inline-block
+	margin: auto
+	text-transform: uppercase
+
+p 
+	font-family: 'UbuntuRegular',sans-serif
+
+span.phone-number
+	font-size: 20px
+	line-height: 24px
+
+span.name
+	font-family: 'UbuntuBold',sans-serif
+	font-size: 14px
+	text-transform: uppercase
+	color: #272727
+	letter-spacing: 2px
+
+span.name-subtitle	
+	font-family: 'PlayfairDisplayItalic',sans-serif
+	font-size: 14px
+	color: #808080
