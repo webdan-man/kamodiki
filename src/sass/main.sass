@@ -33,10 +33,12 @@ section.reviews
 		&:focus
 			outline: none
 		.content
-			height: 395px
+			max-height: 395px
 			width: 100%
 			overflow: hidden
 			position: relative
+			img,video,iframe
+				width: 100%
 			button.play
 				position: absolute
 				top: 50%
@@ -105,7 +107,7 @@ section.price
 		position: relative
 		display: inline-block
 		margin-right: 50px
-		&:nth-child(3)
+		&:nth-of-type(3)
 			margin-right: 0
 		input
 			position: absolute
@@ -189,6 +191,7 @@ section.price
 			position: relative
 			img
 				margin: auto
+				max-width: 284px
 		.slick-arrow
 			bottom: 210px
 		.slick-next
@@ -202,7 +205,7 @@ section.price
 		overflow: hidden
 		position: relative
 		a.buy
-			bottom: 70px
+			bottom: 50px
 			left: 50%
 			position: absolute
 			margin-left: -78px
@@ -296,14 +299,14 @@ section.packet
 			position: absolute
 			top: 0
 			left: 0
-		&:nth-child(1):before
+		&:nth-of-type(1):before
 			background-image: url("../img/packet-icon-1.png")
 			background-repeat: no-repeat
-		&:nth-child(2):before
+		&:nth-of-type(2):before
 			background-image: url("../img/packet-icon-2.png")
 			background-repeat: no-repeat
 			background-position: 7px 4px
-		&:nth-child(3):before
+		&:nth-of-type(3):before
 			background-image: url("../img/packet-icon-3.png")
 			background-repeat: no-repeat
 			background-position: 10px 0
@@ -376,33 +379,37 @@ form.main
 			background-position: 14px center
 
 section.fotos
+	padding: 0
 	h3
+		padding: 0 50px
 		font-size: 35px
 	.wrapper
 		max-width: none
-		.saw
-			position: absolute
-			bottom: 33px
-			width: 132px
-			height: 132px
-			background-image: url("../img/slider-icon.png")
-			background-repeat: no-repeat
-			left: 50%
-			margin-left: -66px
-			z-index: 1
-		span
-			display: inline-block
-		span.slide-number
-			position: absolute
-			bottom: 58px
-			left: 50%
-			margin-left: -20px
-			font-family: 'UbuntuBold',sans-serif
-			font-size: 16px
-			z-index: 3
-			span.from
-				color: #b38159
-				font-family: 'PlayfairDisplayItalic',sans-serif
+	.saw
+		position: absolute
+		bottom: 33px
+		width: 132px
+		height: 132px
+		background-image: url("../img/slider-icon.png")
+		background-repeat: no-repeat
+		left: 50%
+		margin-left: -66px
+		z-index: 1
+	span
+		display: inline-block
+	span.slide-number
+		position: absolute
+		bottom: 58px
+		left: 50%
+		margin-left: -20px
+		font-family: 'UbuntuBold',sans-serif
+		font-size: 16px
+		z-index: 3
+		span.from
+			color: #b38159
+			font-family: 'PlayfairDisplayItalic',sans-serif
+	.slick-slider-fotos-mobile
+		display: none
 	.slick-slider-fotos
 		max-width: none
 		position: relative
@@ -419,26 +426,19 @@ section.fotos
 		.slick-slide
 			width: 900px
 			overflow: hidden
-			height: 395px
+			max-height: 395px
 			opacity: .35
-			-webkit-filter: grayscale(100%)
-			-moz-filter: grayscale(100%)
-			-ms-filter: grayscale(100%)
-			-o-filter: grayscale(100%)
 			filter: grayscale(100%)
 			&.slick-current
 				opacity: 1
-				filter: none
-			.slide-inner
-				max-height: 395px
-				overflow: hidden
-				position: relative
-				max-width: 826px
-				margin: auto
+				filter: none		
 			img
 				width: 100%
 				box-sizing: border-box
 				height: auto
+				position: relative
+				max-width: 826px
+				margin: auto
 	.slick-slider-comment
 		background-color: transparent
 		max-width: 826px
@@ -515,6 +515,7 @@ section.form
 		padding: 28px 32px
 		box-sizing: border-box
 		border-radius: 20px
+		overflow: hidden
 	.bottom
 		width: 750px
 		margin: auto
@@ -529,10 +530,10 @@ section.form
 			color: #fff
 			display: block
 			padding-left: 28px
-		li:nth-child(1)
+		li:nth-of-type(1)
 			background-image: url("../img/marker.png")
 			background-position: 3px 5px
-		li:nth-child(2)
+		li:nth-of-type(2)
 			background-image: url("../img/mail.png")
 			background-position: 0px 8px
 	ul.social
@@ -547,17 +548,17 @@ section.form
 			width: 40px
 			height: 40px
 			margin: 30px 18px 0 0
-	li:nth-child(1)
+	li:nth-of-type(1)
 		a
 			background-image: url("../img/fb.png")
 			&:hover
 				background-image: url("../img/fb-hover.png")
-	li:nth-child(2)
+	li:nth-of-type(2)
 		a
 			background-image: url("../img/inst.png")		
 			&:hover
 				background-image: url("../img/inst-hover.png")
-	li:nth-child(3)
+	li:nth-of-type(3)
 		a
 			background-image: url("../img/vk.png")
 			margin-right: 0
@@ -586,7 +587,7 @@ form.dark
 	padding: 2px
 	text-align: center
 	position: relative
-	box-sizing: content-box
+	box-sizing: border-box
 	.mfp-close
 		position: absolute
 		right: -30px
@@ -616,6 +617,19 @@ form.dark
 		color: $font-color
 		font-family: 'UbuntuLight',sans-serif
 		margin-bottom: 35px
+
+#error-pop,#okgo
+	background-color: #fff 
+	width: 300px
+	color: $font-color
+	margin: auto
+	position: relative
+	text-align: center
+	padding: 50px 20px
+	.mfp-close
+		position: absolute
+		top: 0
+		right: 0
 
 .mfp-container
 	padding: 0

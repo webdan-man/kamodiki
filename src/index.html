@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
 
@@ -56,7 +56,13 @@
 </head>
 
 <body>
-
+	
+	<div class="preloader">
+		<div class="cssload-loader">
+			<div class="cssload-loader-inner"></div>
+		</div>
+	</div>
+	
 	<div id="menu" class="menu">
 		<div class="menu-inner">
 			<button class="close close-mob"></button>
@@ -64,13 +70,13 @@
 				<button class="close"><span></span></button>
 				<nav>
 					<ul>
-						<li><a href="#">Что такое комодик</a></li>
-						<li><a href="#">Отзывы</a></li>
-						<li><a href="#">Наши комодики</a></li>
-						<li><a href="#">Все включено</a></li>
-						<li><a href="#">VIP Комодик</a></li>
-						<li><a href="#">Фотографии производства</a></li>
-						<li><a href="#">Задайте вопрос</a></li>
+						<li><a href="#what-is">Что такое комодик</a></li>
+						<li><a href="#reviews">Отзывы</a></li>
+						<li><a href="#price">Наши комодики</a></li>
+						<li><a href="#packet">Все включено</a></li>
+						<li><a href="#vip">VIP Комодик</a></li>
+						<li><a href="#fotos">Фотографии производства</a></li>
+						<li><a href="#footer">Задайте вопрос</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -87,13 +93,14 @@
 		</div>
 	</div>
 
+	<div class="main-cont">
 	<section class="main-header">
 		<div class="wrapper">
 			<div class="wrapper-inner">
 				<div class="top-line">
 					<a href="#menu" id="menu-open" class="menu-open"><span class="text">Меню</span><span class="burger"></span></a>
 					<span class="title">Komodik</span>
-					<span class="phone-mobile">
+					<div class="phone-mobile">
 						<div class="phone-mob-inner">
 							<span class="cont clearfix">
 								<a href="tel:84952235511" class="left">
@@ -107,7 +114,7 @@
 								</a>
 							</span>
 						</div>
-					</span>
+					</div>
 					<div class="phone">
 						<span class="phone-number">8 495 223 55 11</span>
 						<span class="phone-number">+7 994 242 23 12</span>
@@ -128,7 +135,7 @@
 		</div>
 	</section>
 
-	<section class="what-is">
+	<section class="what-is" id="what-is">
 		<div class="wrapper">
 			<div class="wrapper-inner">
 				<h2 class="white">Комодик?</h2>
@@ -138,7 +145,7 @@
 		</div>
 	</section>
 
-	<section class="reviews">
+	<section class="reviews" id="reviews">
 		<div class="wrapper">
 			<div class="wrapper-inner">
 				<h3>Им уже подарили комодик!</h3>
@@ -178,7 +185,7 @@
 		</div>
 	</section>
 
-	<section class="price">
+	<section class="price" id="price">
 		<div class="wrapper">
 			<div class="wrapper-inner">
 				<h3>Закажите один из стандартных комодиков</h3>
@@ -220,7 +227,7 @@
 											</div>
 										</div>
 									</div>
-									<a href="#popup-form" class="popup other buy">Купить</a>
+									<a href="#popup-form-price" class="popup other buy">Купить</a>
 								</div>
 								<button class="action action--open" aria-label="View details"><i class="fa fa-plus"></i></button>
 							</div>
@@ -248,7 +255,7 @@
 											</div>
 										</div>
 									</div>
-									<a href="#popup-form" class="popup other buy">Купить</a>
+									<a href="#popup-form-price" class="popup other buy">Купить</a>
 								</div>
 								<button class="action action--open" aria-label="View details"><i class="fa fa-plus"></i></button>
 							</div>
@@ -276,7 +283,7 @@
 											</div>
 										</div>
 									</div>
-									<a href="#popup-form" class="popup other buy">Купить</a>
+									<a href="#popup-form-price" class="popup other buy">Купить</a>
 								</div>
 								<button class="action action--open" aria-label="View details"><i class="fa fa-plus"></i></button>
 							</div>
@@ -288,16 +295,16 @@
 		</div>
 	</section>
 
-	<section class="packet">
+	<section class="packet" id="packet">
 		<div class="wrapper">
 			<div class="wrapper-inner">
 				<form id="packet-form" class="dark mobile-packet-form main">
 					<div class="inner">
 						<span>Оставьте свои контактные данные для заказа</span>
-						<input type="text" class="name" placeholder="Имя">
-						<input type="text" class="phone" placeholder="Телефон">
-						<input type="hidden" value="packet-form">
-						<button class="other">Заказать</button>
+						<input type="text" name="name" class="name" placeholder="Имя">
+						<input type="text" name="phone" class="phone" placeholder="Телефон">
+						<input type="hidden" name="frmid" value="Форма 'Все включено' (с мобильной версии)">
+						<button class="popup other">Заказать</button>
 					</div>
 				</form>
 				<h3 class="white">Пакет "Все влючено" гарантирует идеальное поздравление</h3>
@@ -307,12 +314,12 @@
 					<li>Букет цветов от наших партнеров</li>
 				</ul>
 				<img src="img/packet-img.png" alt="">
-				<a href="#" class="other">Заказать "Все включено"</a>
+				<a href="#popup-form-all" class="popup other">Заказать "Все включено"</a>
 			</div>
 		</div>
 	</section>
 
-	<section class="vip">
+	<section class="vip" id="vip">
 		<div class="wrapper">
 			<div class="wrapper-inner">
 				<h3>VIP комодик на любой каприз</h3>
@@ -325,50 +332,57 @@
 							<li>Стразы Сваровски</li>
 							<li>Позолота</li>
 							<li>Гравировка имени и поздравления</li>
-							<img src="img/vip-img-mobile.png" class="hidden" alt="">
 						</ul>
+						<img src="img/vip-img-mobile.png" class="hidden mobile-img" alt="">
 					</div>
 				</div>
 				<form id="vip-form" class="main">
 					<span>Заполните ваши контактные данные и рассчитайте стоимость комодика для Вас!</span>
-					<input type="text" class="name" placeholder="Имя">
-					<input type="text" class="phone" placeholder="Телефон">
-					<input type="hidden" value="vip-form">
-					<button class="other">Отправить</button>
+					<input type="text" name="name" class="name" placeholder="Имя">
+					<input type="text" name="phone" class="phone" placeholder="Телефон">
+					<input type="hidden" name="frmid" value="Форма VIP">
+					<button class="popup other">Отправить</button>
 				</form>
 			</div>
 		</div>
 	</section>
 
-	<section class="fotos">
+	<section class="fotos" id="fotos">
 		<div class="wrapper">
 			<div class="wrapper-inner">
 				<h3>Фотографии нашего производства</h3>
 				<div class="slick-slider-fotos">
 					<div>
-						<div class="slide-inner">
 							<img src="img/slider-foto-1.jpg" alt="">
-						</div>
 					</div>
 					<div>
-						<div class="slide-inner">
 							<img src="img/slider-img.jpg" alt="">
-						</div>
 					</div>
 					<div>
-						<div class="slide-inner">
 							<img src="img/slider-foto-2.jpg" alt="">
-						</div>
 					</div>
 					<div>
-						<div class="slide-inner">
 							<img src="img/slider-foto-3.jpg" alt="">
-						</div>
 					</div>
 					<div>
-						<div class="slide-inner">
 							<img src="img/slider-img.jpg" alt="">
-						</div>
+					</div>
+				</div>
+				<div class="slick-slider-fotos-mobile">
+					<div>
+							<img src="img/slider-foto-1.jpg" alt="">
+					</div>
+					<div>
+							<img src="img/slider-img.jpg" alt="">
+					</div>
+					<div>
+							<img src="img/slider-foto-2.jpg" alt="">
+					</div>
+					<div>
+							<img src="img/slider-foto-3.jpg" alt="">
+					</div>
+					<div>
+							<img src="img/slider-img.jpg" alt="">
 					</div>
 				</div>
 				<div class="saw"></div>
@@ -414,17 +428,17 @@
 		</div>
 	</section>
 
-	<section class="footer form">
+	<section class="footer form" id="footer">
 		<div class="wrapper">
 			<div class="wrapper-inner">
 				<h3 class="white">Остались вопросы?</h3>
 				<form id="footer-form" class="dark">
 					<p>Напишите сюда свой вопрос и мы ответим на него в течении 30 минут</p>
-					<textarea placeholder="Ваш вопрос"></textarea>
-					<input type="text" class="name" placeholder="Имя">
-					<input type="text" class="phone" placeholder="Телефон">
-					<input type="hidden" value="footer-form">
-					<button class="other">Отправить</button>
+					<textarea name="text" placeholder="Ваш вопрос"></textarea>
+					<input type="text" name="name" class="name" placeholder="Имя">
+					<input type="text" name="phone" class="phone" placeholder="Телефон">
+					<input type="hidden" value="Форма из футера">
+					<button class="popup other">Отправить</button>
 				</form>
 				<div class="bottom">
 					<ul class="social">
@@ -445,19 +459,41 @@
 			</div>
 		</div>
 	</section>
+	</div>
 
 	<div class="hidden">
 
-		<form id="popup-form" class="popup-form main">
+		<form id="popup-form-price" class="popup-form main">
 			<div class="inner">
 				<h5>Оставьте свои контактные данные</h5>
 				<span>и мы вам перезвоним</span>
-				<input type="text" class="name" placeholder="Имя">
-				<input type="text" class="phone" placeholder="Телефон">
-				<input type="hidden" value="popup-form">
-				<button class="other">Отправить</button>
+				<input type="text" name="name" class="name" placeholder="Имя">
+				<input type="text" name="phone" class="phone" placeholder="Телефон">
+				<input type="hidden" name="frmid" value="Форма попап с прайса">
+				<button class="other popup">Отправить</button>
 			</div>
 		</form>
+
+		<form id="popup-form-all" class="popup-form main">
+			<div class="inner">
+				<h5>Оставьте свои контактные данные</h5>
+				<span>и мы вам перезвоним</span>
+				<input type="text" name="name" class="name" placeholder="Имя">
+				<input type="text" name="phone" class="phone" placeholder="Телефон">
+				<input type="hidden" name="frmid" value="Форма попап 'Все включено'">
+				<button class="other popup">Отправить</button>
+			</div>
+		</form>
+	
+
+		<div id="error-pop" class="popup">
+			Error
+		</div>
+
+		<div id="okgo" class="popup">
+			Заявка успешно отправлена!<br>
+			С вами свяжутся в ближайшее время
+		</div>
 
 	</div>
 

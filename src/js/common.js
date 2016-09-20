@@ -5,16 +5,19 @@ $(document).ready(function() {
 		$('a.main span').toggleClass('hover');
 	});
 
-	$('a#menu-open, .menu button.close').click(function() {
+	$('a#menu-open, .menu button.close, .menu a').click(function() {
 		$('#menu').toggleClass('nav-open');
-		$('section').toggleClass('nav-is-open');
-		$('#details').fadeOut().removeClass('details-open');
+		$('.main-cont').toggleClass('nav-is-open');
+		$('#details').fadeOut();
+		$('body').toggleClass('scroll-none');
+		return false;
 	});
 
-	$('section, .details button.close').click(function() {
-		if ($('#details').hasClass('details-open')) {
-			$('#details').fadeOut().removeClass('details-open');
-		}
+	$('.main-cont, .details button.close').click(function() {
+		$('.main-cont').removeClass('nav-is-open');
+		$('#menu').removeClass('nav-open');
+		$('#details').fadeOut().removeClass('details-open');
+		$('body').removeClass('scroll-none');
 	});
 
 	$('button#open-chest').click(function() {
@@ -34,9 +37,10 @@ $(document).ready(function() {
 	});
 
 	$('a#details-open').click(function() {
-		$('#details').fadeIn().addClass('details-open');
+		$('#details').fadeIn();
 		$('#menu').removeClass('nav-open');
-		$('section').removeClass('nav-is-open');
+		$('.main-cont').removeClass('nav-is-open');
+		$('body').removeClass('scroll-none');
 		return false;
 	});
 
@@ -48,14 +52,9 @@ $(document).ready(function() {
 		}
 	});
 	
-
 	$('.slick-slider').slick({
 		dots: true,
 	});
-
-	//document.getElementById('for-click').click();
-
-	//$('.checkboxes li:nth-child(2) label').trigger('click');
 
 	$('.slick-slider-price').slick({
 		arrows: false,
@@ -81,35 +80,36 @@ $(document).ready(function() {
 		centerPadding: '60px',
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		variableWidth: true,
-		touchMove: false,
 		asNavFor: '.slick-slider-comment',
+		variableWidth: true,
 		responsive: [
 		{
-			breakpoint: 768,
+			breakpoint: 826,
 			settings: {
-				arrows: false,
 				centerMode: true,
 				centerPadding: '40px',
 				slidesToShow: 3
 			}
 		},
 		{
-			breakpoint: 480,
+			breakpoint: 0,
 			settings: {
-				arrows: false,
-				centerMode: true,
-				centerPadding: '40px',
-				slidesToShow: 1
+				variableWidth: false,
+				slidesToShow: 1,
 			}
 		}
 		]
 	});
+
+	$('.slick-slider-fotos-mobile').slick({
+		asNavFor: '.slick-slider-comment',
+	});
+
 	$('.slick-slider-comment').slick({
 		centerPadding: '60px',
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		asNavFor: '.slick-slider-fotos',
+		asNavFor: '.slick-slider-fotos,.slick-slider-fotos-mobile',
 		arrows: false,
 		fade: true,
 	});
@@ -147,5 +147,148 @@ $(document).ready(function() {
 		},400);
 	});
 
+	// Validation Form
+	$('input[name="name"]').blur(function() {if($(this).val().length < 2) {$(this).addClass('error-input');}});
+	$('input[name="name"]').focus(function() {$(this).removeClass('error-input');});
+
+	$('input[name="phone"]').mask('+7 (999) 999-99-99');
+	$('input[name="phone"]').blur(function() {if($(this).val().length != 18) {$(this).addClass('error-input');}});
+	$('input[name="phone"]').focus(function() {$(this).removeClass('error-input');});
+
+	$.get("http://ipinfo.io", function(response) {geo_url='http://ipgeobase.ru:7020/geo?ip='+response.ip; run_geo(geo_url);}, "jsonp");
+	utm=[];$.each(["utm_source","utm_medium","utm_campaign","utm_term",'source_type','source','position_type','position','added','creative','matchtype'],function(i,v){$('<input type="hidden" />').attr({name: v, class: v, value: function(){if(getURLParameter(v) == undefined)return '-'; else return getURLParameter(v)}}).appendTo("form")});
+	$('<input type="hidden" />').attr({name: 'url', value: document.location.href}).appendTo("form");
+	$('<input type="hidden" />').attr({name: 'title', value: document.title}).appendTo("form");
+
+	$('form').submit(function(e) {
+		e.preventDefault();
+		$(this).find('input[type="text"]').trigger('blur');
+		if(!$(this).find('input[type="text"]').hasClass('error-input')){
+			var type=$(this).attr('method');
+			var url=$(this).attr('action');
+			var data=$(this).serialize();
+			var $event=$(this).find('input[name="event"]').val();
+			$.ajax({type: type, url: url, data: data,
+				success : function(){
+					$.magnificPopup.open({
+						items: [{
+							src: '#okgo',
+							type: 'inline'
+						}],
+						midClick: true,
+						mainClass: 'mfp-fade',
+						removalDelay: 350,
+					});
+				}
+			}); 
+		} else {
+
+			var errorPopText = '';
+
+			if ($(this).find('input[name="name"]').hasClass('error-input') && !$(this).find('input[name="phone"]').hasClass('error-input')) {
+				errorPopText = 'Пожалуйста введите имя';
+			} else if (!$(this).find('input[name="name"]').hasClass('error-input') && $(this).find('input[name="phone"]').hasClass('error-input')) {
+				errorPopText = 'Пожалуйста введите телефон';
+			} else if ($(this).find('input[name="name"]').hasClass('error-input') && $(this).find('input[name="phone"]').hasClass('error-input')) {
+				errorPopText = 'Пожалуйста введите имя и телефон';
+			}
+
+			$('#error-pop').text(errorPopText);
+
+			$.magnificPopup.open({
+				items: [{
+					src: '#error-pop',
+					type: 'inline'
+				}],
+				midClick: true,
+				mainClass: 'mfp-fade',
+				removalDelay: 250,
+			});
+
+		}
+	});
+	// Validation Form Ends
+
+	$('.preloader').fadeOut(250);
 
 });
+
+	// Scroll
+	var sections = $('section');
+			nav = $('nav');
+
+	$(window).on('scroll', function () {
+		var cur_pos = $(this).scrollTop();
+		if (cur_pos > 300) {
+			$('.top-line-fixed').slideDown().show();
+		} else {
+			$('.top-line-fixed').slideUp();
+		}
+		sections.each(function() {
+			var top = $(this).offset().top - 76
+			bottom = top + $(this).outerHeight();
+			if (cur_pos >= top && cur_pos <= bottom) {
+				nav.find('a').removeClass('active');
+				nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+			}
+		});
+	});
+
+	nav.find('a').on('click', function () {
+		var $el = $(this)
+		id = $el.attr('href');
+		$('html, body').animate({
+			scrollTop: $(id).offset().top - 75
+		}, 1000);
+		return false;
+	});
+	// Scroll Ends
+
+	var isMobile = false; 
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		isMobile = true;
+	}
+
+	// Stabilization
+	function stabilize(){
+
+		$('section:not(:hidden)').each(function(index, el) {
+
+			var eTop = $(this).offset().top; 
+			var posTop = eTop - $(window).scrollTop();
+
+			if(posTop>-$(window).height()/2&&posTop<$(window).height()/2){
+				$("html, body").animate({ scrollTop: $(this).offset().top}, 250);
+			}
+
+		});
+
+	}
+
+	$("html, body").on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
+		$("html, body").stop();
+	});
+
+	if (isMobile != true) {
+		$(window).scroll(function(){
+
+			clearTimeout($.data(this, 'scrollTimer'));
+
+			$.data(this, 'scrollTimer',setTimeout(stabilize,1500));
+
+		});
+	}
+	// Stabilization Ends
+
+	// GEO
+	function getURLParameter(name) {return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;} 
+	function run_geo(geo_url){
+		$.ajax({type: 'GET',url: geo_url,dataType: 'xml',
+			success: function(xml) {$(xml).find('ip').each(function(){
+				var city = $(this).find('city').text();
+				var region = $(this).find('region').text();
+				if(city!=region){var ipg = city+', '+region;}else{var ipg = city;}
+				$('<input type="hidden" />').attr({name: 'location', class: 'location', value:ipg}).appendTo("form");
+			});}});
+	}
+	// GEO Ends

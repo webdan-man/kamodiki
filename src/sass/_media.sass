@@ -7,9 +7,9 @@
 	.menu
 		width: 600px
 		perspective: 600px
-	section
+	.main-cont
 		&.nav-is-open
-			transform: translateX(600px)
+			transform: translate3d(600px,0,0)
 	section.main-header 
 		a.menu-open
 			margin-left: 60px
@@ -70,6 +70,12 @@
 			img.vip-img
 				left: -140px
 
+@media only screen and (max-width : 826px)
+	section.fotos 
+		.slick-slider-comment
+			left: auto
+			right: 0
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 	section
@@ -82,8 +88,9 @@
 			position: relative
 			min-height: auto
 			margin: 0
+	.main-cont
 		&.nav-is-open
-			transform: translateX(100%)
+			transform: translate3d(100%,0,0)
 	.menu
 		width: 100vw
 		overflow: hidden
@@ -185,7 +192,7 @@
 				display: none
 		.phone
 			display: none
-		span.phone-mobile
+		.phone-mobile
 			display: block
 			width: 55px
 			height: 55px
@@ -270,7 +277,6 @@
 		.slick-slide
 			.content
 				margin-top: 60px
-				height: 260px
 		.text
 			position: absolute
 			top: 0
@@ -331,6 +337,8 @@
 		.slick-slider-price 
 			.content
 				padding-top: 10px
+				img
+					max-width: 250px
 			.slick-dots
 				bottom: 90px
 				text-align: center
@@ -340,7 +348,7 @@
 				li 
 					display: inline-block
 					margin-right: 25px
-					&:nth-child(3)
+					&:nth-of-type(3)
 						margin-right: 0	
 					button
 						width: 75px
@@ -366,7 +374,7 @@
 			margin-top: 0
 			li 
 				margin: 30px 30px 0 0
-				&:nth-child(3)
+				&:nth-of-type(3)
 					margin-right: 0
 			svg
 				display: none
@@ -437,6 +445,12 @@
 			border-radius: 0
 			position: relative
 			box-shadow: 0 0px 10px 0 rgba(0,0,0,.12)		
+			img.mobile-img
+				position: absolute
+				display: block
+				bottom: -40px
+				left: 50%
+				margin-left: -275px
 			&:before
 				content: ''
 				position: absolute
@@ -467,6 +481,8 @@
 				margin: 7px 0 0
 				padding: 25px 15px 250px
 				position: relative
+				width: 100%
+				box-sizing: border-box
 				&:after
 					content: ''
 					width: 50px
@@ -479,20 +495,14 @@
 					margin-left: -26px
 					border: 1px solid #dbc3b0
 					clip: rect(0, 28px, 60px, 0)
-					transform: rotate(90deg)
-				img
-					position: absolute
-					display: block
-					bottom: -40px
-					left: 50%
-					margin-left: -275px
+					transform: rotate(90deg)			
 				li 
 					width: 50%
 					float: left
 					text-align: center
 					min-height: 45px
 					margin-bottom: 15px
-					&:nth-child(1)
+					&:nth-of-type(1)
 						display: none
 		form.main
 			margin-top: 90px
@@ -504,6 +514,94 @@
 				margin: 0
 				width: 255px
 
+	section.fotos 
+		padding: 20px 0 0
+		h3
+			padding: 0 15px
+			font-size: 29px
+			line-height: 37px
+		.saw,.slide-number
+			display: none
+		.slick-slider-fotos
+			display: none
+		.slick-slider-fotos-mobile
+			display: block
+			.slick-slide
+				max-height: 365px
+				height: 365px
+				line-height: 365px
+				img
+					width: 100%
+					vertical-align: middle
+					display: inline
+			.slick-arrow
+				bottom: auto
+				top: 50%
+				margin: 0
+				width: 62px
+				height: 62px
+				border: 2px solid #fff
+				margin-top: -31px
+				&:before,&:after
+					border-color: #fff
+					border-width: 2px
+					left: 21px
+				&:before
+					top: 25px
+				&:after
+					top: 31px
+				&:hover
+					background-color: transparent
+			.slick-next
+				right: 11px
+			.slick-prev
+				left: 11px
+		.slick-slider-comment
+			position: relative
+			left: auto
+			right: auto
+			top: auto
+			bottom: auto
+			z-index: 
+			margin: -125px 0 0
+			overflow: visible
+			.slick-slide
+				min-height: 280px
+				overflow: visible
+				padding: 60px 0
+			.text-block
+				float: none
+				max-width: 365px
+				width: auto
+				height: auto
+				padding: 30px 40px
+				margin: auto
+				box-shadow: 0px 3px 101px -2px rgba(0,0,0,0.75)
+				p 
+					font-size: 14px
+				h4
+					margin-bottom: 25px
+					font-size: 18px
+					&:after
+						display: none
+	
+	section.form
+		padding: 50px 15px 80px
+		p 
+			font-size: 17px
+			&:after
+				display: none
+		form
+			input
+				display: block
+				margin: 30px auto 0
+			textarea
+				min-height: 200px
+			button
+				width: 255px
+		.bottom
+			display: none
+
 @media only screen and (max-height : 768px)
 	section.main-header
 		.details
@@ -512,6 +610,16 @@
 				position: relative
 				margin-top: 0
 				top: auto
+
+@media only screen and (max-height : 400px)
+	.menu 
+		.menu-inner
+			.menu-inner-center
+				padding: 50px 0
+				height: 100%
+				overflow: auto
+				margin-top: 0
+				top: 0
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -534,7 +642,7 @@
 				margin: 30px 10px 0 0
 				label
 					padding: 3px 20px 5px
-				&:nth-child(3)
+				&:nth-of-type(3)
 					margin-right: 0
 	
 	.popup-form
@@ -550,6 +658,9 @@
 		.menu-inner-center
 			a 
 				padding-left: 0
+	
+	section.main-header .phone-mobile .phone-mob-inner span.number
+		font-size: 16px
 
 	section.what-is
 		span.main 
@@ -563,13 +674,13 @@
 		.advantages
 			ul
 				padding-bottom: 220px
-				img
-					position: absolute
-					display: block
-					bottom: -37px
-					left: 50%
-					width: 500px
-					margin-left: -250px
+			img.mobile-img
+				position: absolute
+				display: block
+				bottom: -37px
+				left: 50%
+				width: 500px
+				margin-left: -250px
 
 @media only screen and (max-width : 380px)
 	.popup-form
