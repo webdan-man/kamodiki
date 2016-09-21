@@ -263,10 +263,11 @@
 		transform-origin: 100% 50%
 		transform: rotateY(-90deg)
 		transition: transform 0.5s
+		min-height: 650px
 	.menu-inner-center
 		position: absolute
-		height: 470px
-		margin-top: -235px
+		min-height: 600px
+		margin-top: -300px
 		top: 50%
 		right: 0
 		padding: 0 55px
@@ -337,6 +338,7 @@ section.main-header
 		right: -165px
 		img
 			width: 100%
+			max-width: 616px
 		button.open
 			position: absolute
 			top: 180px
@@ -371,12 +373,23 @@ section.main-header
 
 	.top-line
 		text-align: center
-	.phone-mobile
-		display: none
 	.phone
 		float: right
 		padding-left: 30px
-	span.phone-number:nth-of-type(2)
+		span.bg 
+			display: none
+	a.phone-number
+		font-family: 'UbuntuLight',sans-serif
+		font-size: 20px
+		display: block
+		line-height: 26px
+		border-bottom: 1px solid transparent
+		color: $font-color
+		span
+			display: none
+		&:hover
+			border-bottom: 1px solid $font-color
+	a.phone-number:nth-of-type(2)
 		position: relative
 		&:before
 			content: ''

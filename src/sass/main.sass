@@ -4,8 +4,8 @@
 
 section.what-is
 	background-image: url("../img/what-is-bg.png")
-	background-position: 0 0
 	background-color: #1d1d1d
+	background-position: 0 0
 	background-size: auto
 	text-align: center
 	span.main
@@ -34,22 +34,33 @@ section.reviews
 			outline: none
 		.content
 			max-height: 395px
+			height: 395px
 			width: 100%
 			overflow: hidden
 			position: relative
-			img,video,iframe
+			.video
 				width: 100%
-			button.play
-				position: absolute
-				top: 50%
-				left: 50%
-				height: 68px
-				width: 68px
-				margin: -34px 0 0 -34px
-				background-color: #fff 
-				border-radius: 50%
-				border: 0
+				height: 100%
+				background-color: #333
+				background-image: url("../img/slider-img.jpg")
+				background-size: cover
 				cursor: pointer
+				&.no-button
+					&:before,&:after
+						display: none
+				&:before
+					position: absolute
+					content: ''
+					top: 50%
+					left: 50%
+					height: 68px
+					width: 68px
+					margin: -34px 0 0 -34px
+					background-color: #fff 
+					border-radius: 50%
+					border: 0
+					cursor: pointer
+					z-index: 3
 				&:after
 					position: absolute
 					content: ''
@@ -60,6 +71,7 @@ section.reviews
 					border-left: 11px solid $accent
 					border-top: 7px solid transparent
 					border-bottom: 7px solid transparent
+					z-index: 4
 	.slick-arrow
 		position: absolute
 		bottom: 0px
@@ -395,6 +407,7 @@ section.fotos
 		left: 50%
 		margin-left: -66px
 		z-index: 1
+		transition-timing-function: linear!important
 	span
 		display: inline-block
 	span.slide-number
@@ -598,12 +611,14 @@ form.dark
 			width: 18px
 			content: ''
 			position: absolute
+			height: 1px
 			top: 15px
-			left: 15px
+			left: 14px
 			border-bottom: 1px solid #fff
 			transform: rotate(45deg)
 		&:after
 			transform: rotate(-45deg)
+			left: 13px
 	.inner
 		border-radius: 30px
 		border: 1px solid #d2c0a6
@@ -626,10 +641,14 @@ form.dark
 	position: relative
 	text-align: center
 	padding: 50px 20px
+	border: 3px solid $accent
+	box-shadow: 0 0 20px 0 rgba(0,0,0,.2)
+	border-radius: 30px
 	.mfp-close
 		position: absolute
 		top: 0
 		right: 0
+
 
 .mfp-container
 	padding: 0
